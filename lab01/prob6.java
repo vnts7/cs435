@@ -29,9 +29,7 @@ public class prob6 {
                 }
             }
         }
-
-        // return
-        
+        // back track
         if (T[n][sum]) {
             List<Integer> l = new ArrayList<>();
             int i = n, j = sum;
@@ -49,14 +47,13 @@ public class prob6 {
                 movedLeft = true;
             }
             return l;
-
         }
         return null;
     }
 
     public static void main(String[] args) {
         // Input: set of items and a sum
-        
+
         System.out.println(subset(new int[] { 1, 3, 9, 4, 8, 5 }, 21));
         System.out.println(subset(new int[] { 1, 3, 9 }, 5));
         System.out.println(subset(new int[] { 1, 3, 9, 4, 8, 5 }, 0));
