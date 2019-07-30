@@ -8,14 +8,14 @@ public class prob1 {
     String r = "";
     for (int i = 0; i < input.length(); i++) {
       char c = input.charAt(i);
-      s.push(c);
       if (c == ' ' || i == input.length() - 1) {
-        if (c != ' ');
-          s.push(' ');
+        if (c != ' ')
+          s.push(c);
         while (!s.isEmpty())
           r += s.pop();
-      }
-
+        r += ' ';
+      } else
+        s.push(c);
     }
     return r;
   }
